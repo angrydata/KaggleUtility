@@ -21,7 +21,7 @@ class KaggleWord2VecUtility(object):
         # 3. 소문자로 변환 후 나눈다.
         words = authors_text.lower().split()
         # 4. 불용어 제거
-        if authors_stopwords:
+        if remove_stopwords:
             stops = set(stopwords.words('english'))
             words = [w for w in words if not w in stops]
         # 5. 어간추출
